@@ -1,4 +1,7 @@
-%h1= name
-- for thumb in thumbnail_resources
-  = link_to thumb.metadata[:locals][:project_image_resource].url, class: "#{options.thumbnail_link_class}" do
-    = image_tag thumb.path, class: "#{options.thumbnail_class}"
+.row
+  .portfolio-title
+    %h1= name
+.row
+  - for thumb in thumbnail_resources
+    = link_to thumb.metadata[:locals][:project_image_resource].url, class: "#{options.thumbnail_link_class} col-xs-6 col-md-3 swipebox" do
+      = image_tag thumb.path, class: "#{options.thumbnail_class}"

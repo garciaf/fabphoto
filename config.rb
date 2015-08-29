@@ -41,11 +41,6 @@
 # activate :automatic_image_sizes
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
 
 # Use LiveReload
 activate :livereload
@@ -76,7 +71,26 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
+
 activate :directory_indexes
+
+helpers do
+  def home_path
+    "/"
+  end
+
+  def portfolio_path
+    opts = extensions[:portfolio].options
+    if opts.defines_setting?(:portfolio_dir) 
+      "/#{opts.portfolio_dir}/"
+    else
+      home_path
+    end
+  end
+end
+
+
+
 # Build-specific configuration
 configure :build do
   ignore 'images/*.psd'

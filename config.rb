@@ -64,6 +64,7 @@ activate :portfolio do |f|
   # override default project template (also must be in source/)
   f.project_template= "project.html.haml"
 end
+activate :middleman_simple_thumbnailer
 
 # Compass configuration
 set :css_dir, 'stylesheets'

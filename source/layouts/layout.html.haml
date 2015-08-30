@@ -22,27 +22,11 @@
     -# Stylesheets
     = stylesheet_link_tag 'application'
   %body{class: current_page.data.body_class || 'page'}
-    .navbar.navbar-inverse
-      .container
-      .navbar-header
-        %button.navbar-toggle.collapsed{"aria-controls" => "navbar", "aria-expanded" => "false", "data-target" => "#navbar", "data-toggle" => "collapse", :type => "button"}
-          %span.sr-only Toggle navigation
-          %span.icon-bar
-          %span.icon-bar
-          %span.icon-bar
-        %a.navbar-brand{:href => home_path } Fabphoto
-      #navbar.collapse.navbar-collapse
-        %ul.nav.navbar-nav
-          %li.active
-            %a{:href => home_path } About
-          %li
-            %a{:href => portfolio_path } Albums
-    / /.nav-collapse    
+    = partial :navigation
     .container
       = yield
     -# Javascripts
     = javascript_include_tag 'application'
-
     - if build?
       -# Google Analytics
       :javascript

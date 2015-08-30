@@ -72,27 +72,37 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
+set :partials_dir, 'partials'
+
+set :fabphoto, {
+  author: {
+    name: 'Fabien',
+    bio: 'Developer by day, fighter and cook by night',
+    location: 'Berlin',
+    website: "http://blog.fabbook.fr", # Optional
+    gravatar_email: 'fab0670312047@gmail.com' # Optional
+  }
+}
+
+# ignore '/portfolio.html.haml'
+
+
 activate :directory_indexes
 
-helpers do
-  def home_path
-    "/"
-  end
+config = YAML.load_file("parameter.yml")
 
-  def portfolio_path
-    opts = extensions[:portfolio].options
-    if opts.defines_setting?(:portfolio_dir) 
-      "/#{opts.portfolio_dir}/"
-    else
-      home_path
-    end
-  end
+activate :deploy do |deploy|
+  deploy.method = :ftp
+  deploy.host = config['deploy']['host']
+  deploy.user = config['deploy']['user']
+  deploy.password = config['deploy']['password']
+  deploy.path = config['deploy']['path']
+  deploy.build_before = true # default: false
 end
-
-
 
 # Build-specific configuration
 configure :build do
+  ignore 'project.html'
   ignore 'images/*.psd'
   ignore 'stylesheets/lib/*'
   ignore 'stylesheets/vendor/*'

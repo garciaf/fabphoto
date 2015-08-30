@@ -1,3 +1,22 @@
-.portfolio-title{
+.center{
   text-align: center
+}
+
+// Add a hover state for linked versions only
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+  border-color: transparent;
+}
+
+.lead {
+  h1, h2, p,small, span{
+    // background-color: white;
+    color: black;
+    padding: 2px 2px 2px 2px;  
+  }
+  small{
+
+  }
+  
 }

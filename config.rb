@@ -54,9 +54,9 @@ activate :portfolio do |f|
   # # thumbnail height (px)
   f.thumbnail_height = 350
 
-  # f.thumbnail_class "thumbnail"
+  # f.thumbnail_class ""
   
-  # f.thumbnail_link_class ""
+  f.thumbnail_link_class = "swipebox thumbnail"
 
   # override default portfolio template (must be located in source/)
   f.portfolio_template=  "portfolio.html.haml"

@@ -43,6 +43,8 @@
 # Methods defined in the helpers block are available in templates
 
 # Use LiveReload
+activate :i18n
+
 activate :livereload
 
 

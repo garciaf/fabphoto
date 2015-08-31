@@ -3,6 +3,30 @@ require 'digest/md5'
 
 module FabphotoHelpers
   
+  def page_title
+    if is_album_page?
+      album_title
+    elsif current_page.data.title
+      current_page.data.title
+    else
+      "Fabphoto"
+    end
+  end
+
+  def album_title(name=nil)
+    name ||= current_resource.metadata[:locals][:name]
+    key = "portfolio.#{current_resource.metadata[:locals][:name]}"
+    if I18n.exists? key
+      I18n.t key
+    else
+      current_resource.metadata[:locals][:name]
+    end
+  end
+
+  def is_album_page?
+    current_resource.metadata[:locals][:name].present?
+  end
+
   def home_path
     "/"
   end

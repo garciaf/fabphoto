@@ -19,7 +19,7 @@
     -# Android 2.3 devices need this so 100% width works properly and
     -# doesn't allow children to blow up the viewport width
     %meta{content: "initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width", name: "viewport"}
-    %link{:href => "/images/iconemain.png", :rel => "icon", :type => "image/png"}/
+    = favicon_tag 'images/iconemain.png'
     -# Stylesheets
     = stylesheet_link_tag 'application'
   %body{class: current_page.data.body_class || 'page'}

@@ -77,6 +77,7 @@ configure :build do
   # Minify Javascript on build
   activate :minify_javascript
 
+  activate :imageoptim
   # Enable cache buster
   # activate :cache_buster
 

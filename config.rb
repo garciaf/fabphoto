@@ -46,10 +46,11 @@ set :fabphoto, {
   }
 }
 
-# ignore '/portfolio.html.haml'
-
 
 activate :directory_indexes
+set :url_root, 'http://fabphoto.fr'
+activate :search_engine_sitemap
+
 
 config = YAML.load_file("parameter.yml")
 

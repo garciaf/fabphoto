@@ -10,10 +10,10 @@ activate :livereload
 activate :portfolio do |f|
 
   # # thumbnail width (px)
-  f.thumbnail_width  = 350 
+  f.thumbnail_width  = 300 
 
   # # thumbnail height (px)
-  f.thumbnail_height = 350
+  f.thumbnail_height = 300
 
   # f.thumbnail_class ""
   

@@ -1,7 +1,8 @@
 ---
 title: Fabphoto Album
 ---
-.row
+.container-fluid.text-center
   - for thumb in thumbnail_resources
-    = link_to thumb.metadata[:locals][:project_image_resource].url, class: "#{options.thumbnail_link_class} col-xs-12 col-md-4" do
-      = image_tag thumb.path, class: "#{options.thumbnail_class}"
+    .item
+      = link_to thumb.metadata[:locals][:project_image_resource].url, class: "swipebox" do
+        = image_tag thumb.path, class: ""

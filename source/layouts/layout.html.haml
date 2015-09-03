@@ -24,8 +24,7 @@
     = stylesheet_link_tag 'application'
   %body{class: current_page.data.body_class || 'page'}
     = partial :navigation
-    .container
-      = yield
+    = yield
     = partial :footer
     -# Javascripts
     = javascript_include_tag 'application'

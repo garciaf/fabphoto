@@ -15,11 +15,11 @@ module FabphotoHelpers
 
   def album_title(name=nil)
     name ||= current_resource.metadata[:locals][:name]
-    key = "portfolio.#{current_resource.metadata[:locals][:name]}"
+    key = "portfolio.#{name}"
     if I18n.exists? key
       I18n.t key
     else
-      current_resource.metadata[:locals][:name]
+      name
     end
   end
 

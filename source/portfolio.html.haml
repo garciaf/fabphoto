@@ -3,6 +3,7 @@ title: Fabphoto Albums
 --- 
 .container-fluid.text-center
   - for project in project_resources
-    .item
+    .item-background{ style: "background-image: url(#{image_path(project.metadata[:locals][:thumbnail_resources].first.path)})" }
       = link_to project.path do
-        = image_tag project.metadata[:locals][:thumbnail_resources].first.path
+        .item.text-nowrap
+          %h4= album_title(project.metadata[:locals][:name])

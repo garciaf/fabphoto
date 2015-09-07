@@ -4,11 +4,15 @@ body_class: slide_show
 ---
 
 .container.content
-  .row.lead.text-right.text-uppercase
-    = link_to  portfolio_path do
-      %span Fabien Garcia
+  .jumbotron
+    .text-center
+      %h1 Fabfoto
   .row.lead.text-right.text-uppercase
     = link_to  portfolio_path do
       %small Quelques photos d'un peu partout et d'un peu de tout
+      
+  .row.lead.text-right.text-uppercase
+    = link_to  portfolio_path do
+      %small Fabien Garcia
       = link_to ">>", portfolio_path, class: "btn btn-primary" 
     

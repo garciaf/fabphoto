@@ -12,7 +12,12 @@
 
   h1,
   .h1 {
+    font-family: 'Open Sans', sans-serif;
     color: $jumbotron-heading-color;
+    letter-spacing: -1px;
+    font-weight: 700;
+    text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+
   }
 
   p {

@@ -27,6 +27,14 @@ module FabphotoHelpers
     current_resource.metadata[:locals][:name].present?
   end
 
+  def cover_url(page=current_page)
+    if is_album_page?
+      URI.join(url_root, current_resource.metadata[:locals][:thumbnail_resources].first.path) 
+    elsif (src = page.data.cover).present?
+      URI.join(url_root, image_path(src))
+    end
+  end
+
   def home_path
     "/"
   end

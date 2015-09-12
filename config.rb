@@ -52,7 +52,7 @@ set :url_root, 'http://fabphoto.fr'
 activate :search_engine_sitemap
 
 
-config = YAML.load ERB.new(File.read('parameter.codeship.yml')).result(binding)
+config = YAML.load ERB.new(File.read('parameter.yml')).result(binding)
 
 ###
 # Helpers

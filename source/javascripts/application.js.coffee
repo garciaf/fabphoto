@@ -9,15 +9,14 @@ $ ->
   $('.slide_show').vegas(
     overlay: true
     transition: 'fade' 
-    transitionDuration: 4000
-    delay: 10000
+    transitionDuration: 3000
+    delay: 5000
     animation: 'random'
-    animationDuration: 20000
+    animationDuration: 15000
     slides: [
       {src: '/images/cover1.jpg'}
       {src: '/images/cover5.jpg'}
       {src: '/images/cover2.jpg'}
-      {src: '/images/cover3.jpg'}
       {src: '/images/cover4.jpg'}
     ]
   )

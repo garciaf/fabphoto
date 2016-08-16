@@ -15,7 +15,9 @@ $ ->
     animationDuration: 20000
     slides: [
       {src: '/images/cover1.jpg'}
+      {src: '/images/cover5.jpg'}
       {src: '/images/cover2.jpg'}
       {src: '/images/cover3.jpg'}
+      {src: '/images/cover4.jpg'}
     ]
   )

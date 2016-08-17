@@ -1,11 +1,14 @@
 #= require_tree ./lib
-#= require ./vendor/jquery.swipebox
-#= require ./vendor/vegas
+#= require_tree ./vendor
 #= require bootstrap/util
 #= require bootstrap/collapse
 
 $ -> 
-  $('.swipebox' ).swipebox()
+  $('.swipebox' ).swipebox(
+    useCSS : true
+    removeBarsOnMobile : true
+    loopAtEnd: true
+  )
 
   $('.slide_show').vegas(
     overlay: true

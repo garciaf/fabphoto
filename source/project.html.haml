@@ -4,6 +4,6 @@ title: Fabphoto Album
 
 .row.text-xs-center
   - for thumb in thumbnail_resources
-    .col-xs-12.col-sm-6.col-md-4.col-lg-2.col-xl-2.item.p-x-0.m-y-0
+    .col-xs-12.col-sm-6.col-md-4.col-lg-3.col-xl-2.item.p-x-0.m-y-0
       = link_to thumb.metadata[:locals][:project_image_resource].url, class: "swipebox" do
         = image_tag thumb.path, class: 'w-100'

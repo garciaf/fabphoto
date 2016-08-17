@@ -49,8 +49,13 @@ module FabphotoHelpers
   end
 
   def css_class(path)
-    "active" if current_page.url == path
+    if path == '/'
+      "active" if current_page.url == path
+    elsif current_page.url.include?(path)
+      "active" 
+    end
   end
+
   def portfolio_path
     opts = extensions[:portfolio].options
     if opts.defines_setting?(:portfolio_dir) 

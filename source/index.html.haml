@@ -5,15 +5,17 @@ body_class: slide_show
 ---
 
 .container.content
-  .jumbotron
-    .text-center
-      %h1 Fabphoto
-  .row.lead.text-right.text-uppercase
-    = link_to  portfolio_path do
-      %small Quelques photos d'un peu partout et d'un peu de tout
-      
-  .row.lead.text-right.text-uppercase
-    = link_to  portfolio_path do
-      %small Fabien Garcia
-      = link_to ">>", portfolio_path, class: "btn btn-primary" 
-    
+  .row
+    .jumbotron
+      .text-xs-center
+        %h1.display-1 Fabphoto
+  .row
+    %blockquote.blockquote.text-uppercase
+      %p
+        = link_to  portfolio_path do
+          %small Quelques photos d'un peu partout et d'un peu de tout
+      %p
+        = link_to portfolio_path, class: "btn btn-link" do
+          Fabien Garcia
+          >>
+          

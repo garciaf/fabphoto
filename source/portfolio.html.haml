@@ -2,8 +2,8 @@
 title: Fabphoto Albums
 cover: cover1.jpg
 --- 
-
-- for project in project_resources
-  .item-background{ style: "background-image: url(#{image_path(project.metadata[:locals][:thumbnail_resources].first.path)})" }
-    = link_to project.path do
-      %h4= album_title(project.metadata[:locals][:name])
+.m-x-auto
+  - for project in project_resources
+    .col-xs-12.col-sm-4.col-md-3.item-background{ style: "background-image: url(#{image_path(project.metadata[:locals][:thumbnail_resources].first.path)})" }
+      = link_to project.path do
+        %h4= album_title(project.metadata[:locals][:name])

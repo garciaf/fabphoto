@@ -2,20 +2,16 @@
 hide_from_sitemap: true
 ---
 
-.navbar.navbar-default
-  .container
-  .navbar-header
-    %button.navbar-toggle.collapsed{"aria-controls" => "navbar", "aria-expanded" => "false", "data-target" => "#navbar", "data-toggle" => "collapse", :type => "button"}
-      %span.sr-only Toggle navigation
-      %span.icon-bar
-      %span.icon-bar
-      %span.icon-bar
-    %a.navbar-brand{:href => home_path }
-      = image_tag 'fgarcia.png', resize_to: '50x50'
-  #navbar.collapse.navbar-collapse
+%nav.navbar.navbar-light.bg-faded.navbar-fixed-top
+  %button.navbar-toggler.hidden-sm-up{"aria-controls" => "exCollapsingNavbar2", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#exCollapsingNavbar2", "data-toggle" => "collapse", :type => "button"}
+    &#9776;
+  .collapse.navbar-toggleable-xs#exCollapsingNavbar2
+    
     %ul.nav.navbar-nav
-      
-      %li{class: css_class(home_path)}
-        %a{:href => home_path  } About
-      %li{class: css_class(portfolio_path) }
-        %a{:href => portfolio_path } Albums
+      %li.nav-item
+        %a{:href => home_path }
+          = image_tag 'fgarcia.png', resize_to: '50x50'
+      %li.nav-item{class: css_class(home_path)}
+        %a.nav-link{:href => home_path  } About
+      %li.nav-item{class: css_class(portfolio_path) }
+        %a.nav-link{:href => portfolio_path } Albums

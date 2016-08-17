@@ -1,7 +1,8 @@
 #= require_tree ./lib
 #= require ./vendor/jquery.swipebox
 #= require ./vendor/vegas
-#= require ./vendor/bootstrap
+#= require bootstrap/util
+#= require bootstrap/collapse
 
 $ -> 
   $('.swipebox' ).swipebox()

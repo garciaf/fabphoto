@@ -6,16 +6,14 @@ body_class: slide_show
 
 .container.content
   .row
-    .jumbotron
-      .text-xs-center
-        %h1.display-1 Fabphoto
+    .jumbotron.text-xs-center
+      %h1.display-2.white.border Fabphoto
   .row
-    %blockquote.blockquote.text-uppercase
-      %p
+    %blockquote.blockquote
+      %p.text-uppercase
         = link_to  portfolio_path do
-          %small Quelques photos d'un peu partout et d'un peu de tout
+          My pictures selection
       %p
         = link_to portfolio_path, class: "btn btn-link" do
-          Fabien Garcia
-          >>
+          F Garcia >>
           

@@ -1,0 +1,20 @@
+// Add a hover state for linked versions only
+.white {
+  color: $white;
+}
+.border {
+  text-shadow: $black 0px 0px 3px;
+}
+.centered-horizontal-text {
+  position: absolute;
+  left: 50%;                        /* horizontal alignment */
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.bg-fade-out {
+  opacity: 0.3;
+  transition: opacity .25s linear;
+  @include hover-focus {
+    opacity: 1;
+  }
+}

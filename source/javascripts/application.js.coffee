@@ -4,13 +4,20 @@
 #= require bootstrap/collapse
 
 $ -> 
-  $('.swipebox' ).swipebox(
+  $('.swipebox' ).swipebox
     useCSS : true
     removeBarsOnMobile : true
     loopAtEnd: true
-  )
 
-  $('.slide_show').vegas(
+  $('.preload-picture').each ->
+    $el = $(@)
+    src = "/#{$el.data('src')}"
+    $.get(src)
+      .done (data) ->
+        $el.attr('src', src)
+        $el.addClass('w-100 fade in')
+
+  $('.slide_show').vegas
     overlay: true
     transition: 'fade' 
     transitionDuration: 3000
@@ -23,4 +30,3 @@ $ ->
       {src: '/images/cover2.jpg'}
       {src: '/images/cover4.jpg'}
     ]
-  )

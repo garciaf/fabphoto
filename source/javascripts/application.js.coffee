@@ -15,7 +15,6 @@ $ ->
     $.get(src)
       .done (data) ->
         $el.attr('src', src)
-        $el.parent().removeClass('loading')
         $el.parent().removeClass('preload-picture')
         $el.addClass('in')
 

@@ -2,8 +2,8 @@
 title: Fabphoto Album
 ---
 
-.row
+.row.w-100.m-x-0
   - for thumb in thumbnail_resources
     .col-xs-12.col-sm-6.col-md-4.col-lg-3.col-xl-2.item.p-x-0.m-y-0.text-xs-center
-      = link_to thumb.metadata[:locals][:project_image_resource].url, class: "swipebox" do
-        = image_tag 'images/loading.gif', class: 'preload-picture', data: { src: thumb.path}
+      = link_to thumb.metadata[:locals][:project_image_resource].url, class: "swipebox loading" do
+        = image_tag 'images/blank.gif', class: 'preload-picture w-100 fade', data: { src: thumb.path}

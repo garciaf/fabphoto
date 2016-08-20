@@ -15,7 +15,9 @@ $ ->
     $.get(src)
       .done (data) ->
         $el.attr('src', src)
-        $el.addClass('w-100 fade in')
+        $el.parent().removeClass('loading')
+        $el.parent().removeClass('preload-picture')
+        $el.addClass('in')
 
   $('.slide_show').vegas
     overlay: true

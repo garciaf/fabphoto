@@ -3,7 +3,7 @@ title: Fabphoto Albums
 cover: cover1.jpg
 --- 
 .row.w-100.m-x-0
-  - for project in project_resources
+  - for project in project_resources.sort_by{|e| e.metadata[:locals][:name].downcase}
     .col-xs-12.col-sm-6.col-md-3.col-lg-3.col-xl-3.text-xs-center.p-x-0
       = link_to project.path, class: 'bg-fade-out loading' do
         - tumbnail = project.metadata[:locals][:thumbnail_resources].sort_by{|e| e.path.downcase}.first

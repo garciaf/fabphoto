@@ -6,5 +6,6 @@ cover: cover1.jpg
   - for project in project_resources
     .col-xs-12.col-sm-6.col-md-3.col-lg-3.col-xl-3.text-xs-center.p-x-0
       = link_to project.path, class: 'bg-fade-out loading' do
-        = image_tag('images/blank.gif', class: 'preload-picture fade w-100', data: {src: project.metadata[:locals][:thumbnail_resources].first.path})
+        - tumbnail = project.metadata[:locals][:thumbnail_resources].sort_by{|e| e.path.downcase}.first
+        = image_tag('images/blank.gif', class: 'preload-picture fade w-100', data: {src: tumbnail.path})
         %h2.centered-horizontal-text.white.border= album_title(project.metadata[:locals][:name])
